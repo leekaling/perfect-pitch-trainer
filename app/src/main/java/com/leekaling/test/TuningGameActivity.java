@@ -46,7 +46,7 @@ public class TuningGameActivity extends AppCompatActivity {
 
         targetProgress = (targetNoteIndex - firstNoteIndex) * 10;
 
-        final TextView temp = (TextView) findViewById(R.id.tempTextView); //debug
+        //final TextView temp = (TextView) findViewById(R.id.tempTextView); //debug
 
         calculateCurrentNoteIndex(tuningSeekBar.getProgress());
         calculateShift(tuningSeekBar.getProgress());
@@ -54,7 +54,7 @@ public class TuningGameActivity extends AppCompatActivity {
         tuningSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                temp.setText(firstNoteIndex + " " + targetNoteIndex + " " + targetProgress + " " + progress); //debug
+                //temp.setText(firstNoteIndex + " " + targetNoteIndex + " " + targetProgress + " " + progress); //debug
                 calculateCurrentNoteIndex(progress);
                 calculateShift(progress);
             }
